@@ -14,3 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/notes', function () {
+    return view('notes');
+});
+
+Route::get('/courses', function () {
+    return view('courses');
+});
+
+Route::get('/achievements', function () {
+    return view('achievements');
+});
+
+Route::any('/wechat', 'WeChatController@serve');
+
+Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
+    Route::get('/user', function () {
+        $user = session('wechat.oauth_user'); // 拿到授权用户资料
+
+        dd($user);
+    });
+});
