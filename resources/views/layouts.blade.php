@@ -56,6 +56,13 @@ if (!strcmp($menu,"order")) $menu_order="active";
 					<li class="nav-item">
 						<a class="nav-link <?php echo($menu_order)?>" href="<?php echo ( URL::to('/order') ); ?>">工单</a>
 					</li>
+					<li class="dropdown">
+    						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    						<img src="/img/qrcode.jpg" style="max-height:40px;" >公众号 
+    <ul class="dropdown-menu"></a>
+        <img src="/img/qrcode.jpg" >
+    </ul>
+</li>
 				</ul>
 			</div>
 			<span class="navbar-text">
