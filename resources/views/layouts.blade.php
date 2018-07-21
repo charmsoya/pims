@@ -25,7 +25,7 @@ if (!strcmp($menu,"home")) $menu_home="active";
 if (!strcmp($menu,"achievements")) $menu_achievements="active";
 if (!strcmp($menu,"courses")) $menu_courses="active"; 
 if (!strcmp($menu,"notes")) $menu_notes="active"; 
-if (!strcmp($menu,"order")) $menu_order="active"; 
+if (!strcmp($menu,"order")) $menu_order="active";
 ?>
 		<nav class="navbar navbar-expand-md" style="background-color: #e3f2fd;">
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -35,16 +35,16 @@ if (!strcmp($menu,"order")) $menu_order="active";
 			<div class="collapse navbar-collapse  justify-content-center" id="navbarNavDropdown">
 				<ul class="nav nav-pills">
 					<li class="nav-item">
-					<a class="nav-link <?php echo($menu_home)?>" href="<?php echo ( URL::to('/') ); ?>">首页</a>
+					<a class="nav-link <?php echo($menu_home)?>" href="<?php echo ( URL::to('/') ); ?>">{{ trans('layouts.home') }}</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link <?php echo($menu_achievements)?>" href="<?php echo ( URL::to('/achievements') ); ?>">成果</a>
+						<a class="nav-link <?php echo($menu_achievements)?>" href="<?php echo ( URL::to('/achievements') ); ?>">{{ trans('layouts.achievements') }}</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link <?php echo($menu_courses)?>" href="<?php echo ( URL::to('/courses') ); ?>">课程</a>
+						<a class="nav-link <?php echo($menu_courses)?>" href="<?php echo ( URL::to('/courses') ); ?>">{{ trans('layouts.course') }}</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle <?php echo($menu_notes)?>" href="<?php echo ( URL::to('/notes') ); ?>" >笔记
+						<a class="nav-link dropdown-toggle <?php echo($menu_notes)?>" href="<?php echo ( URL::to('/notes') ); ?>" >{{ trans('layouts.notes') }}
 						</a> <span id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
 						
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -54,11 +54,11 @@ if (!strcmp($menu,"order")) $menu_order="active";
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link <?php echo($menu_order)?>" href="<?php echo ( URL::to('/order') ); ?>">工单</a>
+						<a class="nav-link <?php echo($menu_order)?>" href="<?php echo ( URL::to('/order') ); ?>">{{ trans('layouts.affairs') }}</a>
 					</li>
 					<li class="dropdown">
     						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    						<img src="/img/qrcode.jpg" style="max-height:40px;" >公众号 
+    						<img src="/img/qrcode.jpg" style="max-height:40px;" >{{ trans('layouts.wechat') }} 
     <ul class="dropdown-menu"></a>
         <img src="/img/qrcode.jpg" >
     </ul>
@@ -66,11 +66,11 @@ if (!strcmp($menu,"order")) $menu_order="active";
 				</ul>
 			</div>
 			<span class="navbar-text">
-				有账户？
+			{{ trans('layouts.have_accout') }} &nbsp;	
 			</span>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">登陆</a>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ trans('layouts.login') }} </a>
 					<ul id="login-dp" class="dropdown-menu dropdown-menu-right">
 						<li>
 							<div class="row">
@@ -106,13 +106,13 @@ if (!strcmp($menu,"order")) $menu_order="active";
 						</li>
 					</ul>
 				</li>
-
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">语言</a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="/en">英语</a></li>
-						<li><a href="/zh_cn">汉语</a></li>
-					</ul>
+&nbsp;&nbsp;&nbsp;
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" >{{ trans('layouts.languages') }}</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="/en" style="min-width: 40px;">{{ trans('layouts.lan_en') }}</a>
+						<a class="dropdown-item" href="/zh_cn" style="min-width: 40px;">{{ trans('layouts.lan_cn') }}</a>
+					</div>
 				</li>
 			</ul> 
 
