@@ -42,3 +42,5 @@ Route::get('/{locale}', function ($locale) {
 	session(['my_locale' => $locale]);  	
 	return redirect()->back();
 });
+
+
