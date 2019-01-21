@@ -37,6 +37,14 @@ Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
     });
 });
 
+Route::group(['middleware' => 'admin.permission:allow,administrator,editor'], function () {
+    Route::get('/admin/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('/admin/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
+    // list all lfm routes here...
+});
+
+
+
 // language setting
 Route::get('/{locale}', function ($locale) {
 	session(['my_locale' => $locale]);  	

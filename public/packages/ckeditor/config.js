@@ -35,10 +35,4 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
-
-	config.filebrowserImageBrowseUrl = '/laravel-filemanager?type=Images';
-	config.filebrowserImageUploadUrl = '/laravel-filemanager/upload?type=Images&_token=';
-	config.filebrowserBrowseUrl = '/laravel-filemanager?type=Files';
-    	config.filebrowserUploadUrl = '/laravel-filemanager/upload?type=Files&_token=';
-
 };

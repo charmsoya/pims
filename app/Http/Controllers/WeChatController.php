@@ -18,7 +18,7 @@ class WeChatController extends Controller
 
         $app = app('wechat.official_account');
         $app->server->push(function($message){
-            return "终于等到你，加入无线通信科研小组，探索前沿科学问题，收获知识、成长、友情和欢乐";
+            return "终于等到你，亲爱的，加入通信与信号处理科研小组，探索前沿科学问题，收获知识、成长、友情和欢乐!";
         });
 
         return $app->server->serve();
