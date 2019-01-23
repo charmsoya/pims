@@ -15,14 +15,15 @@ class CreateArticlesTable extends Migration
         Schema::create('article_records', function (Blueprint $table) {
 		$table->increments('id');
 		$table->timestamp('published_at');
-		$table->timestamps();
+		$table->timestamp('created_at');
+		$table->timestamp('updated_at');
 		$table->boolean('online');
+		$table->integer('plate_id');
 	});
 	Schema::create('article_translations', function (Blueprint $table) {
 		$table->increments('id');
 		$table->integer('article_id')->unsigned();
 		$table->string('locale')->index();
-		
 		$table->string('title');
 		$table->text('abstract');
 		$table->text('content');
@@ -38,6 +39,8 @@ class CreateArticlesTable extends Migration
 		$table->boolean('is_leaf');
 		$table->integer('parent_id');
 		$table->integer('level');
+		$table->timestamp('updated_at');
+		$table->timestamp('create_at');
 	});
     }
 
