@@ -35,6 +35,7 @@ class CreateArticlesTable extends Migration
 	});
 	Schema::create('article_plates', function(Blueprint $table) {
 		$table->increments('id');
+		$table->primary('id');
 		$table->text('name');
 		$table->text('translate_name');
 		$table->boolean('is_leaf');
