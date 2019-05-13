@@ -13,4 +13,5 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('article_plates', Article_plateController::class);
     $router->resource('article_records', Article_recordController::class);
+    $router->resource('wechat', WechatController::class);
 });

@@ -27,6 +27,10 @@ Route::get('/achievements', function () {
     return view('achievements');
 });
 
+Route::get('/signup', function () {
+    return view('signup');
+});
+
 Route::any('/wechat', 'WeChatController@serve');
 
 Route::group(['middleware' => ['web', 'wechat.oauth']], function () {

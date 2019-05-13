@@ -28,7 +28,7 @@ if (!strcmp($menu,"notes")) $menu_notes="active";
 if (!strcmp($menu,"order")) $menu_order="active";
 ?>
 		<nav class="navbar navbar-expand-md" style="background-color: #e3f2fd;">
-			<a class="navbar-brand" href="#">Navbar</a>
+			<a class="navbar-brand" href="/"><img src = '/img/logo.gif' style="max-height:40px;" ></img></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -100,7 +100,7 @@ if (!strcmp($menu,"order")) $menu_order="active";
 									</form>
 								</div>
 								<div class="bottom text-center">
-									第一次来？<a href="#"><b>加入</b></a>
+									第一次来？<a href="/signup"><b>加入</b></a>
 								</div>
 							</div>
 						</li>
@@ -125,7 +125,7 @@ if (!strcmp($menu,"order")) $menu_order="active";
 		<footer class="container-fluid foot-wrap">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 text-center">©2018 Dr. Douzhe Li</div>
+					<div class="col-md-4 text-center">© 2017-2019 Dr. Douzhe Li All rights reserved.</div>
 					<div class="col-md-4 text-center"><a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">晋ICP备18007010号</a></div>
 					<div class="col-md-4 text-center">Powered by <a href="https://laravel.com/">Laravel</a></div>
 				</div>

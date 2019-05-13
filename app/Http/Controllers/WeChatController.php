@@ -21,7 +21,9 @@ class WeChatController extends Controller
             return "终于等到你，亲爱的，加入通信与信号处理科研小组，探索前沿科学问题，收获知识、成长、友情和欢乐!";
         });
 
-        return $app->server->serve();
+	$response = $app->server->serve();
+
+	return $response;
     }
 }
 ?>
